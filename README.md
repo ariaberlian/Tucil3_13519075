@@ -3,19 +3,12 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Features](#features)
 * [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
 
 ## General info
 Proyek ini dibuat untuk memenuhi tugas kecil 3 IF2211 Strategi Algoritma 2020/2021.
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
 
 ## Technologies
 * python - version 3.9
