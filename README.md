@@ -20,7 +20,7 @@ Proyek ini dibuat untuk memenuhi tugas kecil 3 IF2211 Strategi Algoritma 2020/20
 
 - install package matplotlib
 
-- jalankan graph.py
+- jalankan Main.py dengan `python Main.py`
 
 ## Status
 Project is: _finished_
