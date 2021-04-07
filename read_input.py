@@ -22,8 +22,8 @@ def membaca_input():
     arrayKoordinatMentah = contents[:contents.index("MATRIKS\n")]
     for koordinatTempat in arrayKoordinatMentah:
         namaNode = koordinatTempat.replace("\n", "").split(" ")
-        kamusKoordinat[namaNode[0]]["lat"] = int(namaNode[1])
-        kamusKoordinat[namaNode[0]]["lng"] = int(namaNode[2])
+        kamusKoordinat[namaNode[0]]["lat"] = float(namaNode[1])
+        kamusKoordinat[namaNode[0]]["lng"] = float(namaNode[2])
 
     # Parsing matriks
     MATRIKS = []
