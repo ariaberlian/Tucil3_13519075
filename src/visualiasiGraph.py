@@ -9,11 +9,11 @@ def membuatGraph(start, goal):
     # Inisialisasi Graph
     G = networkx.Graph()
     # Initialize variables from PathFinder
-    ordered_sequence = Astar(start, goal)
+    alur_terpendek = Astar(start, goal)
     # Jarak
     distance_sum = 0
-    for i in range(len(ordered_sequence) - 1):
-        distance_sum += kamusBeban[ordered_sequence[i]][ordered_sequence[i + 1]]
+    for i in range(len(alur_terpendek) - 1):
+        distance_sum += kamusBeban[alur_terpendek[i]][alur_terpendek[i + 1]]
     # Bentuk semua nodes
     for nodes in kamusBeban:
         G.add_node(nodes, pos=(kamusKoordinat[nodes]['lat'], kamusKoordinat[nodes]['lng']))
@@ -30,16 +30,16 @@ def membuatGraph(start, goal):
     # Mewarnai node yang dikunjungi
     node_color = []
     for node in G.nodes:
-        if node in ordered_sequence:
+        if node in alur_terpendek:
             node_color.append("red")
         else:
             node_color.append("blue")
 
     networkx.draw(G, pos, with_labels=True, node_size=1200, node_color=node_color)
-    for i in range(len(ordered_sequence)):
-        if (i != len(ordered_sequence) - 1):
-            print(f"{ordered_sequence[i]} ->", end=" ")
+    for i in range(len(alur_terpendek)):
+        if (i != len(alur_terpendek) - 1):
+            print(f"{alur_terpendek[i]} ->", end=" ")
         else:
-            print(ordered_sequence[i])
+            print(alur_terpendek[i])
     print(f"Panjang lintasan adalah {distance_sum}")
     pyplots.show()

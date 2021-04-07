@@ -17,46 +17,33 @@ def Astar(start, goal):
     # ADD CURRENT TO OPEN 
     opened.append([current, kamusHeuristic[current]])
     while True:
-
         current = min(opened, key=lambda x: x[1])
-
-        checked_node = current[0]
- 
+        node_dikunjungi = current[0]
         closed.append(current)
-
         opened.remove(current)
 
         if (closed[-1][0] == goal):
             break
-
-        for children in kamusBeban[checked_node].items():
-
-            if children[0] in [closed_nodes[0] for closed_nodes in closed]:
+        for anak in kamusBeban[node_dikunjungi].items():
+            if anak[0] in [closed_nodes[0] for closed_nodes in closed]:
                 continue
-
-            cost.update({children[0]: cost[checked_node] + children[1]})
-
-            current_fval = cost[checked_node] + kamusHeuristic[children[0]] + children[1]
-
-            temp = [children[0], current_fval]
+            cost.update({anak[0]: cost[node_dikunjungi] + anak[1]})
+            current_fval = cost[node_dikunjungi] + kamusHeuristic[anak[0]] + anak[1]
+            temp = [anak[0], current_fval]
             opened.append(temp)
 
-
     last_node = goal
-    ordered_sequence = []
-    ordered_sequence.append(goal)
+    alur_terpendek = []
+    alur_terpendek.append(goal)
 
     for i in range(len(closed) - 2, -1, -1):
-
         check_node = closed[i][0]
-
-        if last_node in [children[0] for children in kamusBeban[check_node].items()]:
+        if last_node in [anak[0] for anak in kamusBeban[check_node].items()]:
             if (cost[check_node] + kamusBeban[check_node][last_node] == cost[last_node]):
-                ordered_sequence.append(check_node)
+                alur_terpendek.append(check_node)
                 last_node = check_node
-    # Reverse ordering from ordered_sequence
-    ordered_sequence.reverse()
-    return ordered_sequence
+    alur_terpendek.reverse()
+    return alur_terpendek
 
 
 def buatkamusHeuristic(goal):
