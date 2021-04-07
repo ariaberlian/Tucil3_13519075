@@ -1,0 +1,20 @@
+ITB DagoA DagoB DagoC DagoD DagoE DagoF DagoG DagoH
+ITB 4 2
+DagoA 6 6
+DagoB 2 1
+DagoC 5 4
+DagoD 0 0
+DagoE 9 3
+DagoF 1 7
+DagoG 12 5
+DagoH 15 15
+MATRIKS
+0 0 0 1 0 1 0 1 0
+0 0 0 1 0 1 0 1 0
+0 0 0 1 0 1 0 1 0
+1 1 1 0 1 1 0 1 1
+0 0 0 1 0 1 0 1 0
+1 1 1 1 1 0 1 1 1
+0 0 0 1 0 1 0 1 0
+1 1 1 1 0 1 1 0 1
+0 0 0 1 0 1 0 1 0

@@ -16,7 +16,11 @@ Proyek ini dibuat untuk memenuhi tugas kecil 3 IF2211 Strategi Algoritma 2020/20
 * Networkx - version 2.5.1
 
 ## Setup
-- jalankan graph.py`
+- install package networkx
+
+- install package matplotlib
+
+- jalankan graph.py
 
 ## Status
 Project is: _finished_
