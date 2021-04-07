@@ -6,7 +6,7 @@ kamusKoordinat = defaultdict(dict)
 
 
 def membaca_input():
-    directory = dirname(abspath(__file__))
+    directory = dirname(dirname(abspath(__file__)))
     namaFile = str(input("Nama File tanpa ekstensi: "))
     lokasiFile = os.path.join(directory, 'test\\' + namaFile + '.txt')
     f = open(lokasiFile, "r")
